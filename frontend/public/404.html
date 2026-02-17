@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting…</title>
+  <style>
+    html,body{height:100%}body{display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:#1f2937}
+  </style>
+  <script>
+    ;(function(){
+      var target = '/index.html'
+      if (location && location.origin) {
+        target = location.origin + '/index.html'
+      }
+      setTimeout(function(){ location.replace(target) }, 0)
+    })()
+  </script>
+</head>
+<body>
+  <div>Redirecting…</div>
+</body>
+</html>
