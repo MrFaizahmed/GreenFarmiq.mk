@@ -4,7 +4,7 @@ const testFixes = async () => {
     console.log('Testing if fixes are working...');
     
     // Test fetching all listings (this should now work in ViewRequirementsPage)
-    const response = await fetch('http://localhost:5000/api/product-listings', {
+    const response = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
