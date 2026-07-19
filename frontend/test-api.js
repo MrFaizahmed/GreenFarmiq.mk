@@ -4,13 +4,13 @@ const testAPIConnection = async () => {
     console.log('Testing API connection...');
     
     // Test the root endpoint
-    const response = await fetch('http://localhost:5000/');
+    const response = await fetch('https://greenfarmiq-1.onrender.com/');
     const data = await response.text();
     console.log('Root endpoint response:', data);
     
     // Test product listings endpoint (should return 401 without auth)
     try {
-      const listingsResponse = await fetch('http://localhost:5000/api/product-listings');
+      const listingsResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings');
       console.log('Product listings endpoint status:', listingsResponse.status);
       const listingsData = await listingsResponse.json();
       console.log('Product listings response:', listingsData);
