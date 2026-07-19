@@ -4,7 +4,7 @@ const testAuthFlow = async () => {
     console.log('Testing authentication flow...');
     
     // Test login
-    const loginResponse = await fetch('http://localhost:5000/api/users/login', {
+    const loginResponse = await fetch('https://greenfarmiq-1.onrender.com/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const testAuthFlow = async () => {
     console.log('✅ Login successful');
     
     // Test accessing protected route with token
-    const protectedResponse = await fetch('http://localhost:5000/api/product-listings', {
+    const protectedResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
