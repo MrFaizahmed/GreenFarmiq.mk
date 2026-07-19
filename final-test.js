@@ -5,7 +5,7 @@ const finalTest = async () => {
     
     // Test 1: Check if backend is running
     console.log('\n1. Testing backend connectivity...');
-    const backendResponse = await fetch('http://localhost:5000/');
+    const backendResponse = await fetch('https://greenfarmiq-1.onrender.com/');
     if (backendResponse.ok) {
       console.log('✅ Backend is running');
     } else {
@@ -16,7 +16,7 @@ const finalTest = async () => {
     // Test 2: Check if frontend is running
     console.log('\n2. Testing frontend connectivity...');
     try {
-      const frontendResponse = await fetch('http://localhost:5173/');
+      const frontendResponse = await fetch('https://greenfarmiq-1.onrender.com/');
       if (frontendResponse.ok) {
         console.log('✅ Frontend is running');
       } else {
@@ -28,7 +28,7 @@ const finalTest = async () => {
     
     // Test 3: Test public API access (View Requirements)
     console.log('\n3. Testing public API access (View Requirements)...');
-    const publicListingsResponse = await fetch('http://localhost:5000/api/product-listings');
+    const publicListingsResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings');
     const publicListingsData = await publicListingsResponse.json();
     if (publicListingsResponse.status === 200) {
       console.log(`✅ Public API access working - ${publicListingsData.length} listings available`);
@@ -38,7 +38,7 @@ const finalTest = async () => {
     
     // Test 4: Test authentication
     console.log('\n4. Testing authentication...');
-    const loginResponse = await fetch('http://localhost:5000/api/users/login', {
+    const loginResponse = await fetch('https://greenfarmiq-1.onrender.com/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const finalTest = async () => {
       
       // Test 5: Test protected API access
       console.log('\n5. Testing protected API access...');
-      const protectedResponse = await fetch('http://localhost:5000/api/product-listings', {
+      const protectedResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const finalTest = async () => {
         }
       };
       
-      const postResponse = await fetch('http://localhost:5000/api/product-listings', {
+      const postResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
