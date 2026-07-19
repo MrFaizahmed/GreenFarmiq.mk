@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Proxy API requests to backend during development to avoid CORS
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://greenfarmiq-1.onrender.com',
         changeOrigin: true,
         secure: false,
       },
