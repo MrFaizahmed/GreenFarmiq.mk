@@ -5,7 +5,7 @@ async function testAuthFlow() {
   console.log('🧪 Testing Authentication Flow...\n');
   
   // Assuming server is running on localhost:5000
-  const BASE_URL = 'http://localhost:5000/api';
+  const BASE_URL = 'https://greenfarmiq-1.onrender.com/api';
   
   // Test user data
   const testUser = {
