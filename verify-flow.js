@@ -5,7 +5,7 @@ const verifyDataFlow = async () => {
     
     // Step 1: Login as buyer
     console.log('1. Logging in as buyer...');
-    const loginResponse = await fetch('http://localhost:5000/api/users/login', {
+    const loginResponse = await fetch('https://greenfarmiq-1.onrender.com/api/users/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -35,7 +35,7 @@ const verifyDataFlow = async () => {
       budget: { minPrice: 60, maxPrice: 95 }
     };
     
-    const postResponse = await fetch('http://localhost:5000/api/product-listings', {
+    const postResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const verifyDataFlow = async () => {
     
     // Step 3: Verify it appears in View Requirements (public API)
     console.log('3. Checking View Requirements page (public API)...');
-    const viewResponse = await fetch('http://localhost:5000/api/product-listings');
+    const viewResponse = await fetch('https://greenfarmiq-1.onrender.com/api/product-listings');
     const viewData = await viewResponse.json();
     
     if (viewResponse.status !== 200) {
